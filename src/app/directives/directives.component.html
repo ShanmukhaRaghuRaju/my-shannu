@@ -1,0 +1,32 @@
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<h4>{{date}}</h4>
+<h4>{{date | date}}</h4>
+<h4>{{date | date:'dd/MM/yyyy'}}</h4>
+<h4>{{date | date:'hh-mm-ss'}}</h4>
+
+
+<table class="table table-info">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td [ngStyle]="{color:product.price>7000?'red':'green'}">{{product.price}}</td>
+            <td [ngClass]="{'red':product.rating<2,'yellow':product.rating>2}">{{product.rating}} </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+<h2 *ngIf="true">hello everyone</h2>
+<h2 *ngIf="false">good morning </h2>

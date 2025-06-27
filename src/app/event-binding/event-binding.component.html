@@ -1,0 +1,25 @@
+<button (click)="click()">click</button><br>
+<input (keyup)="name()"><br>
+<select (change)="change()">
+    <option value="">austrila</option>
+     <option value="">india</option>
+      <option value="">pakistan</option>
+</select>
+
+<h3> name:{{username}}</h3>
+<h3>age:{{age}}</h3>
+
+<button [disabled]="datapresent">subscribe</button>
+<input [(ngModel)]="mobile" (keyup)="nqme()">
+
+
+
+<input type="number" placeholder="enter number" [(ngModel)]="num1">
+<input type="number" placeholder="enter number" [(ngModel)]="num2">
+<h3>Result: {{ result }}</h3>
+<button (click)="add()" [disabled]="!num1 || !num2">Add</button>
+<button (click)="sub()">sub</button>
+<button (click)="mul()">mul</button>
+<button (click)="div()">div</button>
+
+
