@@ -9,10 +9,12 @@
     width: 20%;
     background-color: #15e022;
     cursor: pointer;
+    overflow: auto;
 }
 .right{
     height: 100%;
     width: 80%;
     background-color: brown;
      cursor: pointer;
+      overflow: auto;
 }

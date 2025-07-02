@@ -1,0 +1,23 @@
+<h1>cards</h1>
+<div class="parent">
+    
+    <div class="card" *ngFor="let card of cards let i = index">
+       
+        
+        <img src={{card.download_url}} height="100px" width="100px">
+       
+        <a href="{{card.download_url}}" target="_blank">
+            <button>
+                Downlaod
+            </button>
+        
+        </a>
+        
+
+        
+
+
+
+         
+    </div>
+</div>

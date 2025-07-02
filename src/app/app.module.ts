@@ -13,6 +13,14 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { TableComponent } from './table/table.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AmazonComponent } from './amazon/amazon.component';
+import { EmailsComponent } from './emails/emails.component';
+import { CardsComponent } from './cards/cards.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +33,20 @@ import { DirectivesComponent } from './directives/directives.component';
     ClaculatorComponent,
     EventBindingComponent,
     LoginPageComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    TableComponent,
+    FlipkartComponent,
+    VehiclesComponent,
+    AmazonComponent,
+    EmailsComponent,
+    CardsComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+<h1>emails</h1>
+<table>
+    <tbody>
+        <tr *ngFor="let email of emails">
+            <td [ngStyle]="{'color':email.completed==false?'black':'white'}">{{email.id}}</td>
+            <td [ngStyle]="{'color':email.completed==false?'black':'white'}">{{email.title}}</td>
+        </tr>
+
+    </tbody>
+    
+</table>

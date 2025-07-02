@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+import { VehiclesService } from '../vehicles.service';
+
+@Component({
+  selector: 'app-vehicles',
+  templateUrl: './vehicles.component.html',
+  styleUrls: ['./vehicles.component.css']
+})
+export class VehiclesComponent {
+  vehicles:any[]=[]
+
+  constructor(private _vehiclesServices:VehiclesService){
+    _vehiclesServices.getVehicles().subscribe(
+      (data:any)=>{
+        console.log(data)
+        this.vehicles=data;
+      },(err:any)=>{
+        alert("internal error")
+      }
+    )
+  }
+
+}
+

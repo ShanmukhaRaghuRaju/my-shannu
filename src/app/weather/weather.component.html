@@ -1,0 +1,18 @@
+<div class="weather-card" *ngIf="weather && units">
+  <h2>Weather in Hyderabad</h2>
+
+  <div class="circle" [ngStyle]="{ 'background-color': getDotColor(weather.temperature) }"></div>
+
+  <div class="temperature">
+    {{ weather.temperature }}{{ units.temperature }}
+  </div>
+
+  <div class="details">
+    Wind Speed: {{ weather.windspeed }} {{ units.windspeed }}<br>
+    Wind Direction: {{ weather.winddirection }}° ({{ getDirection(weather.winddirection) }})
+  </div>
+
+  <div class="day-label">
+    {{ weather.is_day === 1 ? 'Daytime' : 'Nighttime' }}
+  </div>
+</div>

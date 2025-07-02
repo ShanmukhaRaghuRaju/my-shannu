@@ -1,0 +1,36 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    position: relative;
+}
+    
+a{
+    position: absolute;
+    top: 20%;
+
+}
+.author-name {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 3px 6px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: opacity 0.3s;
+}
+.parent:hover .author-name {
+  display: block;
+}
