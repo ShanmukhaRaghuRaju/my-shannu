@@ -1,0 +1,19 @@
+<input type="text"  [(ngModel)]="term" (keyup)="search()">
+
+
+<div *ngFor="let student of students" class="card">
+  <img [src]="student.school_logo" alt="School Logo" class="school-logo">
+  <h3>{{ student.school_name }}</h3>
+  <p>{{ student.school_city }}, PIN: {{ student.school_pin }}</p>
+
+  <hr>
+
+  <p><strong>Name:</strong> {{ student.name }}</p>
+  <p><strong>Email:</strong> {{ student.email }}</p>
+  <p><strong>DOB:</strong> {{ student.dob }}</p>
+  <p><strong>Phone:</strong> {{ student.phone }}</p>
+  <p><strong>City:</strong> {{ student.city }}</p>
+  <p><strong>ID:</strong> {{ student.id }}</p>
+
+  <img [src]="student.profile_picture" alt="Student Photo" class="student-photo">
+</div>

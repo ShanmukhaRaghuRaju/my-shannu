@@ -10,7 +10,7 @@ import { ErrorComponent } from './error/error.component';
 import { ClockComponent } from './clock/clock.component';
 import { ClaculatorComponent } from './claculator/claculator.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { TableComponent } from './table/table.component';
@@ -21,6 +21,8 @@ import { AmazonComponent } from './amazon/amazon.component';
 import { EmailsComponent } from './emails/emails.component';
 import { CardsComponent } from './cards/cards.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { IdcardsComponent } from './idcards/idcards.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +42,16 @@ import { WeatherComponent } from './weather/weather.component';
     AmazonComponent,
     EmailsComponent,
     CardsComponent,
-    WeatherComponent
+    WeatherComponent,
+    CreateVehicleComponent,
+    IdcardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { createComponent, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,6 +17,8 @@ import { AmazonComponent } from './amazon/amazon.component';
 import { EmailsComponent } from './emails/emails.component';
 import { CardsComponent } from './cards/cards.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { IdcardsComponent } from './idcards/idcards.component';
 
 const routes: Routes = [
  
@@ -33,6 +35,8 @@ const routes: Routes = [
     {path:'email',component:EmailsComponent},
     {path:'card',component:CardsComponent},
     {path:'weather',component:WeatherComponent},
+    {path:'createvehicle',component:CreateVehicleComponent},
+    {path:'idcards',component:IdcardsComponent},
 
     
   ]},
