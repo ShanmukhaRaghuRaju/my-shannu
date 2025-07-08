@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { VehiclesService } from '../vehicles.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-vehicle',
@@ -19,9 +19,40 @@ export class CreateVehicleComponent {
           manufacturer:new FormControl(),
            image:new FormControl(),
   })
-  constructor(private _VehiclesService:VehiclesService,private _router:Router){}
+    id:number=0;
+  constructor( private _activatedRoute:ActivatedRoute,  private _VehiclesService:VehiclesService,private _router:Router){
+  
+    _activatedRoute.params.subscribe(
+      (data:any)=>{
+        console.log(data.id);
+        this.id=data.id;
+      }
+    )
+    if(this.id){
+      _VehiclesService.getVehicle(this.id).subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.vehicleForm.patchValue(data);
+      },(err:any)=>{
+        alert("internal service error")
+      }
+    )
+    }
+  }
   submit(){
-    console.log(this.vehicleForm.value);
+    if (this.id) {
+      this._VehiclesService.updateVehicle(this.id, this.vehicleForm.value).subscribe(
+        (data:any)=>{
+          alert("vehicle record successfully updated");
+          this._router.navigateByUrl("/dashboard/vehicles");
+
+        },(err:any)=>{
+          alert("internal service error")
+        }
+      )
+      
+    } else {
+      console.log(this.vehicleForm.value);
     this._VehiclesService.createVehicle(this.vehicleForm.value).subscribe(
       (data:any)=>{
         alert("vehicle record add sucess full")
@@ -31,6 +62,8 @@ export class CreateVehicleComponent {
 
       }
     )
+      
+    }
   }
 
 }

@@ -19,10 +19,16 @@ import { CardsComponent } from './cards/cards.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { IdcardsComponent } from './idcards/idcards.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
- 
-    {path:'dashboard',component:DashboardComponent,children:[
+  {path:'registration',component:RegistrationComponent},
+  {path:'',component:LoginComponent}, 
+    {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard],children:[
     {path:'clock',component:ClockComponent},
     {path:'calculator',component:ClaculatorComponent},
     {path:'event',component:EventBindingComponent},
@@ -37,6 +43,10 @@ const routes: Routes = [
     {path:'weather',component:WeatherComponent},
     {path:'createvehicle',component:CreateVehicleComponent},
     {path:'idcards',component:IdcardsComponent},
+     {path:'create-students',component:CreateStudentComponent},
+     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+     {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+     {path:'idcard-details/:id',component:IdcardDetailsComponent}
 
     
   ]},

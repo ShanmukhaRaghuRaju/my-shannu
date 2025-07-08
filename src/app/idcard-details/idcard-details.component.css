@@ -1,0 +1,34 @@
+.student-table {
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.student-table th {
+  background-color: #087cf0;
+  color: rgb(255, 255, 255);
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #800bf6;
+}
+.student-table tr:nth-child(odd) {
+  background-color: #fcfbfe;
+}
+
+.profile-pic,
+.school-logo {
+  width: 70px;
+  height: 60ccccpx;
+  border-radius: 6px;
+}
+

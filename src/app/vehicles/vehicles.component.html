@@ -11,7 +11,7 @@
             <th>Cost</th>
             <th>Fuel</th>
             <th>Image</th>
-            <th>Actions</th>
+            <th colspan="2">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -22,10 +22,22 @@
             <td>{{vehicle.fuel}}</td>
             <td><img src="{{vehicle.image}}" width="100px"></td>
             <td>
-                <button (click)="delete(vehicle.id)" class="btn btn-danger">Delete
+            <button class="btn btn-info" routerLink="/dashboard/vehicle-details/{{vehicle.id}}">
+                
+                View
+
+            </button>
+            </td>
+            <td >
+                <button class="btn btn-warning" routerLink="/dashboard/edit-vehicle" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">Edit</button>
+            </td>
+           
+            <td>
+                <button (click)="delete(vehicle.id)" class="btn btn-danger" >Delete
 
                 </button>
             </td>
+            
         </tr>
     </tbody>
 </table>

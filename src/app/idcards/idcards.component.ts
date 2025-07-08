@@ -7,6 +7,8 @@ import { IdcardService } from '../idcard.service';
   styleUrls: ['./idcards.component.css']
 })
 export class IdcardsComponent {
+
+  
   students: any;
   constructor(private  _idcardService:IdcardService){
     this._idcardService.getidcards().subscribe(
@@ -27,6 +29,18 @@ export class IdcardsComponent {
     
     
 
+  }
+  column:string='';
+  order:string='';
+  sort(){
+    if (!this.column || !this.order) return;
+    console.log(this.column,this.order);
+    this._idcardService.getsortedidcards(this.column,this.order).subscribe(
+      (data:any)=>{
+        console.log(data);
+        this.students=data
+      }
+    )
   }
 
 }

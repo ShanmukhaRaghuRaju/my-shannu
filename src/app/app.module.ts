@@ -23,6 +23,10 @@ import { CardsComponent } from './cards/cards.component';
 import { WeatherComponent } from './weather/weather.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { IdcardsComponent } from './idcards/idcards.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { IdcardsComponent } from './idcards/idcards.component';
     CardsComponent,
     WeatherComponent,
     CreateVehicleComponent,
-    IdcardsComponent
+    IdcardsComponent,
+    CreateStudentComponent,
+    VehicleDetailsComponent,
+    IdcardDetailsComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
