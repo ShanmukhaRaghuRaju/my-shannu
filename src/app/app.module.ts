@@ -27,6 +27,8 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { RegistrationComponent } from './registration/registration.component';
     CreateStudentComponent,
     VehicleDetailsComponent,
     IdcardDetailsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
