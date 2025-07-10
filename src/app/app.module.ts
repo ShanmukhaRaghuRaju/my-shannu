@@ -16,7 +16,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { TableComponent } from './table/table.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AmazonComponent } from './amazon/amazon.component';
 import { EmailsComponent } from './emails/emails.component';
 import { CardsComponent } from './cards/cards.component';
@@ -32,6 +32,7 @@ import { ChildComponent } from './child/child.component';
 import { Sibiling1Component } from './sibiling1/sibiling1.component';
 import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { RatingComponent } from './rating/rating.component';
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,13 @@ import { RatingComponent } from './rating/rating.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:AuthInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
