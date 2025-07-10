@@ -29,6 +29,9 @@ import { IdcardDetailsComponent } from './idcard-details/idcard-details.componen
 import { RegistrationComponent } from './registration/registration.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { Sibiling2Component } from './sibiling2/sibiling2.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { ChildComponent } from './child/child.component';
     IdcardDetailsComponent,
     RegistrationComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    Sibiling1Component,
+    Sibiling2Component,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

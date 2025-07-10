@@ -25,6 +25,8 @@ import { IdcardDetailsComponent } from './idcard-details/idcard-details.componen
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
 import { ParentComponent } from './parent/parent.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { RatingComponent } from './rating/rating.component';
 
 const routes: Routes = [
   {path:'registration',component:RegistrationComponent},
@@ -48,7 +50,9 @@ const routes: Routes = [
      {path:'vehicle-details/:id',component:VehicleDetailsComponent},
      {path:'edit-vehicle/:id',component:CreateVehicleComponent},
      {path:'idcard-details/:id',component:IdcardDetailsComponent},
-      {path:'parent',component:ParentComponent},
+     {path:'parent',component:ParentComponent},
+     {path:'sibiling1',component:Sibiling1Component},
+     {path:'rating',component:RatingComponent}
 
     
   ]},

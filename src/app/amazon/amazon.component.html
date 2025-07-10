@@ -6,7 +6,7 @@
         <p>{{amazon.title}}</p>
         <p>Rs{{amazon.price}}</p>
         <div class="rating">
-            {{amazon.rating.rate}}
+       <app-rating [rating]="amazon.rating.rate"></app-rating>
         </div>
     </div>
 </div>
