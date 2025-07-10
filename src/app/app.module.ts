@@ -32,6 +32,7 @@ import { ChildComponent } from './child/child.component';
 import { Sibiling1Component } from './sibiling1/sibiling1.component';
 import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { RatingComponent } from './rating/rating.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { RatingComponent } from './rating/rating.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
