@@ -6,13 +6,20 @@
 
     <div *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid">
         <p *ngIf="studentForm.get('name')?.errors?.['required']">Name should be enter</p>
-        <p  *ngIf="studentForm.get('name')?.errors?.['required']">Name should be minimum 6 characters</p>
-        <p  *ngIf="studentForm.get('name')?.errors?.['required']">Name should be maximum 12 characters</p>
+        <p  *ngIf="studentForm.get('name')?.errors?.['minlength']">Name should be minimum 6 characters</p>
+        <p  *ngIf="studentForm.get('name')?.errors?.['maxlength']">Name should be maximum 12 characters</p>
     </div>
 
 
     <label>Enter Email:</label>
     <input type="text" formControlName="email"><br>
+    <div *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid">
+        <p *ngIf="studentForm.get('email')?.errors?.['required']">Name should be enter</p>
+        <p  *ngIf="studentForm.get('email')?.errors?.['minlength']">Name should be minimum 6 characters</p>
+        <p  *ngIf="studentForm.get('email')?.errors?.['maxlength']">Name should be maximum 12 characters</p>
+        <p  *ngIf="studentForm.get('email')?.errors?.['mohithMail']">email should be mohith mail</p>
+    </div>
+
      <label>Enter Mobile:</label>
     <input type="text" formControlName="mobile"><br>
      <label>Enter age:</label>
