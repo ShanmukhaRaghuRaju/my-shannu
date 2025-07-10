@@ -27,6 +27,11 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { Sibiling2Component } from './sibiling2/sibiling2.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +57,12 @@ import { RegistrationComponent } from './registration/registration.component';
     CreateStudentComponent,
     VehicleDetailsComponent,
     IdcardDetailsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibiling1Component,
+    Sibiling2Component,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

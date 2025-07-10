@@ -24,6 +24,9 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
+import { ParentComponent } from './parent/parent.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { RatingComponent } from './rating/rating.component';
 
 const routes: Routes = [
   {path:'registration',component:RegistrationComponent},
@@ -46,7 +49,10 @@ const routes: Routes = [
      {path:'create-students',component:CreateStudentComponent},
      {path:'vehicle-details/:id',component:VehicleDetailsComponent},
      {path:'edit-vehicle/:id',component:CreateVehicleComponent},
-     {path:'idcard-details/:id',component:IdcardDetailsComponent}
+     {path:'idcard-details/:id',component:IdcardDetailsComponent},
+     {path:'parent',component:ParentComponent},
+     {path:'sibiling1',component:Sibiling1Component},
+     {path:'rating',component:RatingComponent}
 
     
   ]},
@@ -54,7 +60,7 @@ const routes: Routes = [
   {path:'**',component:ErrorComponent},
   
 ];
-
+ 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
