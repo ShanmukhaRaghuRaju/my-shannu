@@ -27,9 +27,11 @@ import { AuthGuard } from './auth.guard';
 import { ParentComponent } from './parent/parent.component';
 import { Sibiling1Component } from './sibiling1/sibiling1.component';
 import { RatingComponent } from './rating/rating.component';
+import { AboutUsComponent } from './about-us/about-us/about-us.component';
 
 const routes: Routes = [
   {path:'registration',component:RegistrationComponent},
+  {path:'about-us',component:AboutUsComponent},
   {path:'',component:LoginComponent}, 
     {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard],children:[
     {path:'clock',component:ClockComponent},
@@ -58,6 +60,7 @@ const routes: Routes = [
   ]},
   {path:'home',component:HomeComponent},
   {path:'**',component:ErrorComponent},
+  
   
 ];
  
