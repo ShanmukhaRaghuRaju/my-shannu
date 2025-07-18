@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms'; // ✅ Needed for ngModel
 import { EventBindingComponent } from './event-binding.component';
 
 describe('EventBindingComponent', () => {
@@ -8,9 +8,9 @@ describe('EventBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventBindingComponent ]
-    })
-    .compileComponents();
+      declarations: [EventBindingComponent],
+      imports: [FormsModule] // ✅ Fix for ngModel error
+    }).compileComponents();
 
     fixture = TestBed.createComponent(EventBindingComponent);
     component = fixture.componentInstance;

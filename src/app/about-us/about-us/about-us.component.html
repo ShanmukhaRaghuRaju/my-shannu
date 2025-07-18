@@ -1,1 +1,18 @@
 <p>about-us works!</p>
+
+
+<h2 *ngIf="isuser else  admin">welcome shannu user</h2>
+
+
+
+
+<ng-template #admin>
+    <h2 *ngIf="isadmin else student">welcome jayanth admin</h2>
+
+</ng-template>
+
+<ng-template #student>
+    <h2 *ngIf="isstudent">welcome vamsi student</h2>
+
+</ng-template>
+

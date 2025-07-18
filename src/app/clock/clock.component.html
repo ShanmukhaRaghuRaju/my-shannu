@@ -1,1 +1,27 @@
 <p>clock works!</p>
+<button disabled="{{isDisabled}}">red with string interpolation</button>
+<button [disabled]="isDisabled">red with property binding</button>
+<button [class.active]="buttonactive" [class.nonactive]="!buttonactive">click me</button>
+<input type="text " (keyup.enter)="val(d)" #d>
+<!-- <input type="text" [value]="Name"  (keyup.enter)="keyfilter(name)" #name> -->
+<input type="text" [(ngModel)]="Name">
+<h3>{{Name}}</h3>
+
+<h3 *ngIf="islogin; else admin">Login in</h3>
+
+<ng-template #admin>
+    <h3 *ngIf="isadmin; else user">welcome admin</h3>
+
+
+</ng-template>
+<ng-template #user>
+    <h3 *ngIf="isuser">welcome user</h3>
+
+</ng-template>
+
+
+<button (click)="login()" *ngIf="num <= 3">login</button>
+<h3 *ngIf="num > 3">you attempted more than 3 times</h3>
+
+
+

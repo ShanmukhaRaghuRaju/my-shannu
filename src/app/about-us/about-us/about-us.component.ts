@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent {
+  isuser:boolean=false;
+  isadmin:boolean=false;
+  isstudent:boolean=true;
 
 }
